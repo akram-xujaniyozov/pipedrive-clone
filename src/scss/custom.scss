@@ -1,0 +1,41 @@
+// Import functions
+@import '../../node_modules/bootstrap/scss/functions';
+// Import variables
+@import '../../node_modules/bootstrap/scss/variables';
+
+$blue-violet: #211c52;
+$light-violet: lighten(#211c52, 30%);
+$lightest-blue: #e3edf5;
+$light-grey: #f1f1ea;
+// Custom colors
+$custom-theme-colors: (
+  'blue-violet': $blue-violet,
+  'light-violet': $light-violet,
+  'light-primary': $lightest-blue,
+  'light-grey': $light-grey,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+// custom font-sizes
+$custom-font-sizes: (
+  12: 0.75rem,
+  14: 0.875rem,
+);
+$font-sizes: map-merge($custom-font-sizes, $font-sizes);
+
+// custom spacers
+$custom-spacers: (
+  2x: $spacer * 0.125,
+  3x: $spacer * 0.1875,
+  6: $spacer * 0.375,
+  10: $spacer * 0.625,
+  12: $spacer * 0.75,
+  20: $spacer * 1.25,
+  28: $spacer * 1.75,
+  36: $spacer * 2.25,
+);
+$spacers: map-merge($custom-spacers, $spacers);
+
+// Import bootstrap library
+@import '../../node_modules/bootstrap/scss/bootstrap';
